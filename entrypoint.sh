@@ -30,7 +30,7 @@ fi
 # Create a dedicated profile for this action to avoid conflicts
 # with past/future actions.
 # https://github.com/jakejarvis/s3-sync-action/issues/1
-aws configure --profile s3-sync-action <<-EOF > /dev/null 2>&1
+aws configure --profile r2-delete-action <<-EOF > /dev/null 2>&1
 ${AWS_ACCESS_KEY_ID}
 ${AWS_SECRET_ACCESS_KEY}
 ${AWS_REGION}
@@ -40,7 +40,7 @@ EOF
 # Remove file using our dedicated profile and suppress verbose messages.
 # All other flags are optional via the `args:` directive.
 sh -c "aws s3 rm s3://${AWS_S3_BUCKET}/${PATH_TO_DELETE} \
-              --profile s3-rm-action \
+              --profile r2-delete-action \
               ${ENDPOINT_APPEND} $*"
 
 # Clear out credentials after we're done.
