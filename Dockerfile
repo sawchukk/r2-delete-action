@@ -1,14 +1,12 @@
 FROM python:3.8-alpine
 
-LABEL "com.github.actions.name"="S3 Sync"
-LABEL "com.github.actions.description"="Sync a directory to an AWS S3 repository"
+LABEL "com.github.actions.name"="R2 Delete"
+LABEL "com.github.actions.description"="Delete an object from an R2 bucket"
 LABEL "com.github.actions.icon"="refresh-cw"
 LABEL "com.github.actions.color"="green"
 
 LABEL version="0.5.1"
-LABEL repository="https://github.com/jakejarvis/s3-sync-action"
-LABEL homepage="https://jarv.is/"
-LABEL maintainer="Jake Jarvis <jake@jarv.is>"
+LABEL repository="https://github.com/sawchukk/r2-delete-action"
 
 # https://github.com/aws/aws-cli/blob/master/CHANGELOG.rst
 ENV AWSCLI_VERSION='1.18.14'
