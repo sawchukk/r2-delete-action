@@ -47,7 +47,7 @@ sh -c "aws s3 rm s3://${AWS_S3_BUCKET}/${PATH_TO_DELETE} \
 # We need to re-run `aws configure` with bogus input instead of
 # deleting ~/.aws in case there are other credentials living there.
 # https://forums.aws.amazon.com/thread.jspa?threadID=148833
-aws configure --profile s3-sync-action <<-EOF > /dev/null 2>&1
+aws configure --profile r2-delete-action <<-EOF > /dev/null 2>&1
 null
 null
 null
